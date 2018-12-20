@@ -1289,6 +1289,7 @@ MonoBehaviour:
   GUI: {fileID: 802763445}
   StartMenu: {fileID: 0}
   playing: 0
+  threshold: -50
 --- !u!4 &1255366393
 Transform:
   m_ObjectHideFlags: 0

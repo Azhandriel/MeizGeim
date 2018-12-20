@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
     public GameObject GUI;
     public GameObject StartMenu;
     public bool playing;
+    public float threshold;
 
     // Use this for initialization
     void Start () {
@@ -89,5 +90,11 @@ public class Player : MonoBehaviour {
     void Shoot()
     {
         Instantiate(bullet.transform, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+    }
+
+    void FixedUpdate()
+    {
+        if (transform.position.y < threshold)
+            transform.position = initial;
     }
 }
